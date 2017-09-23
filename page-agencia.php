@@ -4,7 +4,7 @@ Template Name: Template para Agencia
 */
 ?>
 <?php get_header(); ?>
-<?php get_template_part( 'front-page-cards' ); ?>
+<?php get_template_part( 'part-cards' ); ?>
 <div class="container">
 	<div class="row">
 		<section id="content" role="main">

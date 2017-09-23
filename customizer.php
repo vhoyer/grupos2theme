@@ -4,46 +4,7 @@ function grupos2theme_customizer_settings( $wp_customize ) {
 	$themeroot = get_template_directory();
 
 
-	$wp_customize->add_section( 'grupos2theme_nav' , array(
-		'title'      => __('Navigation bar'),
-		'priority'   => 30,
-	) );
-
-		/*[nav_logo]{{{*/
-		$wp_customize->add_setting( 'nav_logo' , array(
-			'default'     => "${themeroot}/imgs/nav_logo_grupos2_2016.png",
-			'transport'   => 'refresh',
-		) );
-		$wp_customize->add_control( new WP_Customize_Image_Control(
-			$wp_customize,
-			'nav_logo',
-			array(
-				'label'      => __( 'Upload a logo', 'grupos2theme' ),
-				'section'    => 'grupos2theme_nav',
-				'settings'   => 'nav_logo',
-			)
-		) );/*}}}*/
-
-	$wp_customize->add_section( 'grupos2theme_header' , array(
-		'title'      => __('Header do site'),
-		'priority'   => 31,
-	) );
-
-		/*[header_bg]{{{*/
-		$wp_customize->add_setting( 'header_bg' , array(
-			'default'     => "${themeroot}/imgs/header_bg.png",
-			'transport'   => 'refresh',
-		) );
-		$wp_customize->add_control( new WP_Customize_Image_Control(
-			$wp_customize,
-			'header_bg',
-			array(
-				'label'      => __( 'Upload a background image', 'grupos2theme' ),
-				'section'    => 'grupos2theme_header',
-				'settings'   => 'header_bg',
-			)
-		) );/*}}}*/
-
+	/*[Pages feeds]{{{*/
 	$wp_customize->add_section( 'grupos2theme_feeds' , array(
 		'title'      => __('Pages feeds', "grupos2theme"),
 		'priority'   => 32,
@@ -82,7 +43,9 @@ function grupos2theme_customizer_settings( $wp_customize ) {
 			'section' => 'grupos2theme_feeds',
 			'type' => 'dropdown-pages',
 		));/*}}}*/
+	/*}}}*/
 
+	/*[Buttons]{{{*/
 	$wp_customize->add_section( 'grupos2theme_btns' , array(
 		'title'      => __('Buttons', "grupos2theme"),
 		'priority'   => 32,
@@ -132,4 +95,5 @@ function grupos2theme_customizer_settings( $wp_customize ) {
 			'section' => 'grupos2theme_btns',
 			'type' => 'url',
 		));/*}}}*/
+	/*}}}*/
 }

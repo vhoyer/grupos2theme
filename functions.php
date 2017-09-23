@@ -9,7 +9,15 @@ function grupos2theme_setup()
 	load_theme_textdomain( 'grupos2theme', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails', array( 'page' ) );
+	add_theme_support( 'custom-header' );
+	add_theme_support( 'custom-logo', array(
+		'height'      => 50,
+		'width'       => 150,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	) );
+
 	add_theme_support( 'menus' );
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 640;
