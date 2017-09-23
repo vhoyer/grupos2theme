@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Template para Produtos
+*/
+?>
 <?php get_header(); ?>
 <?php get_template_part( 'banner' ); ?>
 <?php
