@@ -33,14 +33,12 @@
 </div>
 </footer>
 </div>
-<script src='<?php bloginfo('stylesheet_directory'); ?>/scripts/jquery-3.2.1.slim.min.js'></script>
-<script src='<?php bloginfo('stylesheet_directory'); ?>/scripts/owl.carousel.min.js'></script>
+<?php wp_footer(); ?>
 <script type='text/javascript'>
 var id=function(e){return document.getElementById(e)}
 document.addEventListener("DOMContentLoaded",function(){window.onscroll=function(){var e=window.pageYOffset,n=document.getElementById("menu")
 e<=0?n.classList.remove("scrolled"):n.classList.add("scrolled")}}),$(document).ready(function(){$(".owl-carousel").owlCarousel({autoplay:!0,autoplayHoverPause:!0,autoplayTimeout:5e3,loop:!0,smartSpeed:750,items:1})}),$("#nav-menu-laucher").click(function(){var e=id("nav-menu-laucher").children[0]
 $(".nav-main_menu")[0].classList.toggle("open"),e.classList.toggle("fa-bars"),e.classList.toggle("fa-times")})
 </script>
-<?php wp_footer(); ?>
 </body>
 </html>

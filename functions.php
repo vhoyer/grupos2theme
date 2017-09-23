@@ -17,25 +17,22 @@ function grupos2theme_setup()
 	);
 }
 add_action( 'wp_enqueue_scripts', 'grupos2theme_load_scripts' );
-function grupos2theme_load_scripts()
-{
-	/*
+function grupos2theme_load_scripts() {
 	//
 	// jquery
 	//
-	wp_enqueue_script( 'jquery', '', array(), '', true );
+	wp_enqueue_script( 'jqueryslim', get_template_directory_uri().'/'.'scripts/jquery-3.2.1.slim.min.js', array(), '', true );
 	//
 	// Owl
 	//
 	wp_enqueue_style( 'owlmin', get_template_directory_uri().'/sass/owl.carousel.min.css' );
 	wp_enqueue_style( 'owltheme', get_template_directory_uri().'/sass/owl.theme.default.min.css' );
-	wp_enqueue_script( 'owlcarousel', get_template_directory_uri().'/scripts/owl.carousel.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'owlcarousel', get_template_directory_uri().'/scripts/owl.carousel.min.js', array('jqueryslim'), '', true );
 	//
 	// Fonts
 	//
-	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/sass/font-awesome.min.css', array(), '' );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/'.'sass/framework/font-awesome.min.css', array(), '' );
 	wp_enqueue_style( 'opensans', 'https://fonts.googleapis.com/css?family=Open+Sans' );
-	 */
 }
 add_action( 'comment_form_before', 'grupos2theme_enqueue_comment_reply_script' );
 function grupos2theme_enqueue_comment_reply_script()
