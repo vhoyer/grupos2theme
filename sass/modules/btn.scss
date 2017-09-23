@@ -1,0 +1,22 @@
+.btn{
+	display: block;
+	padding: .4em 1em;
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+.btn.round{
+	border-radius: 7px;
+}
+
+.btn.btn-orange{
+	background-color: $color_orange;
+}
+.btn.btn-blue{
+	background-color: $color_blue;
+}
+.btn.btn-bluegray{
+	background-color: $color_bluegray;
+}

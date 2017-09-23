@@ -1,0 +1,133 @@
+%container {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	margin: 0;
+	padding: 0 1.5em;
+}
+%solid-transparent{
+	transition: color .1s ease, background-color .5s ease-in, box-shadow .3s ease;
+}
+
+.admin-bar #menu{
+	@media screen and (min-width: 600px){
+		top: 46px;
+	}
+	@media screen and (min-width: 782px){
+		top: 32px;
+	}
+}
+
+#menu{
+	@extend %container;
+	@extend %solid-transparent;
+	z-index: 2;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: $header_height;
+	color: #eee;
+	background-color: transparent;
+	box-shadow: none;
+	&.scrolled{
+		@extend %solid-transparent;
+		color: #333;
+		background-color: #fff;
+		box-shadow: 0 0 2px #000;
+
+		&>.nav-main_menu{
+			background-color: inherit;
+		}
+	}
+
+	a img{
+		max-height: calc(#{$header_height} - .5em);
+	}
+
+	#nav-menu-laucher{
+		padding: 10px;
+	}
+
+	.nav-main_menu{
+		@extend %container;
+		background-color: rgba(0,0,0,0.8);
+		box-shadow: 0 0 2px #000;
+		display: none;
+		top: $header_height;
+		padding-top: 1em;
+		padding-bottom: 1em;
+
+		.menu>ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li{
+				width: 100%;
+				margin-bottom: 1em;
+			}
+			a{
+				display: inline-block;
+				width: 100%;
+				color: inherit;
+				text-decoration: none;
+				text-align: center;
+			}
+		}
+
+		&.open{
+			display: block;
+		}
+	}
+}
+@media screen and (min-width: $screen_lg){// {{{
+	#menu{
+		&.scrolled>.nav-main_menu{
+			background-color: transparent;
+		}
+
+		#nav-menu-laucher{
+			display: none;
+		}
+
+		.nav-main_menu{
+			position: initial;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			box-shadow: none;
+			background-color: transparent;
+			width: auto;
+			height: 100%;
+			padding: 0 0;
+			font-weight: 900;
+
+			.menu>ul{
+				margin-right: 1em;
+				display: flex;
+				align-items: center;
+
+				&>li{
+					margin-bottom: 0;
+					width: auto;
+					float: left;
+				}
+				a{
+					padding: .5em 1em;
+					transition: all .1s ease;
+					transition-property: color, border;
+
+					&:hover{
+						border-top: $color_bluegray 3px solid;
+						border-bottom: $color_bluegray 3px solid;
+						color: $color_bluegray;
+					}
+				}
+			}
+			.btn{
+				text-transform: uppercase;
+			}
+		}
+	}
+}// }}}

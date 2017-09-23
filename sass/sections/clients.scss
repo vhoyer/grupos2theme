@@ -1,0 +1,33 @@
+$client-box-size: 250px;
+
+#clients{
+	div.clients>div.client {
+		display: flex;
+		align-items: center;
+		width: $client-box-size;
+		height: $client-box-size;
+		margin: 1em;
+		overflow: hidden;
+	}
+
+	div.clients>div img{
+		z-index: -1;
+		position: absolute;
+		display: block;
+		width: $client-box-size;
+		height: auto;
+		transition: filter .2s ease-out;
+	}
+	div.clients>div:hover img{
+		filter: blur(3px);
+		transition: filter .2s ease-out;
+	}
+
+	div.clients>div p{
+		display: none;
+		margin: 0 1em;
+	}
+	div.clients>div:hover p{
+		display: block;
+	}
+}

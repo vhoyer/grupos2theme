@@ -1,0 +1,31 @@
+//
+// Framework
+//
+@import 'framework/normalize.scss';
+@import 'framework/bootstrap-grid.scss';
+@import 'framework/variables.scss';
+@import 'framework/base.scss';
+@import 'framework/extends.scss';
+//
+// Sections
+//
+@import 'sections/cards.scss';
+@import 'sections/cases.scss';
+@import 'sections/clients.scss';
+@import 'sections/contato.scss';
+@import 'sections/footer.scss';
+@import 'sections/header.scss';
+@import 'sections/nav_menu.scss';
+@import 'sections/partnership.scss';
+@import 'sections/services.scss';
+@import 'sections/sidebar.scss';
+//
+// Modules
+//
+@import 'modules/btn.scss';
+@import 'modules/center.scss';
+@import 'modules/destyle_anchor.scss';
+@import 'modules/flex-wrapper.scss';
+@import 'modules/headings.scss';
+@import 'modules/imgs.scss';
+@import 'modules/panel.scss';

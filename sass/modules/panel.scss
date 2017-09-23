@@ -1,0 +1,13 @@
+@for $i from 1 through 4 {
+	.panel-#{$i}{
+		background-color: lighten($color_bluegray, 10+(5*$i));
+
+		i.fa{
+			margin-top: 1em;
+		}
+		p{
+			margin-bottom: 0;
+			padding-bottom: 1em;
+		}
+	}
+}

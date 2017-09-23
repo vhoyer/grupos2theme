@@ -1,0 +1,12 @@
+%pseudo-block {
+	content: ' ';
+}
+
+%svg-bg {
+	@extend %pseudo-block;
+	z-index: -1;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

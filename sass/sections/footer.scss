@@ -1,0 +1,31 @@
+#copyright{
+	margin: .5em 0;
+	font-size: .5em;
+	text-align: center;
+}
+.social {
+	padding-top: 1.63em;
+
+	i{
+		margin: .2em;
+		width: 1em;
+		height: 1em;
+		text-align: center;
+	}
+
+	[class*="facebook"]:hover{
+		color: #3b5998;
+	}
+
+	[class*="twitter"]:hover{
+		color: #009eed;
+	}
+
+	[class*="instagram"]:hover{
+		color: #bc2a8d;
+	}
+
+	[class*="linkedin"]:hover{
+		color: #0077b5;
+	}
+}
