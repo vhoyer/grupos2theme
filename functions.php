@@ -10,10 +10,11 @@ function grupos2theme_setup()
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'menus' );
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 640;
 	register_nav_menus(
-		array( 'main-menu' => __( 'Main Menu', 'grupos2theme' ) )
+		array( 'main_nav' => __( 'Main navigation menu (fiexed at the top)', 'grupos2theme' ) )
 	);
 }
 add_action( 'wp_enqueue_scripts', 'grupos2theme_load_scripts' );
