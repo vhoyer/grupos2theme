@@ -4,7 +4,6 @@ Template Name: Template para Produtos
 */
 ?>
 <?php get_header(); ?>
-<?php get_template_part( 'banner' ); ?>
 <?php
 $query = new WP_Query( [
 'post_type'      => 'page',
