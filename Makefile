@@ -1,6 +1,12 @@
 jsframeworks = scripts/framework.js
 jsfiles = $(wildcard scripts/src/*.js)
 
+zipfiles = *.php screenshot.jpg style.css languages/ sass/fonts/* sass/third-party/* scripts/third-party/* imgs/*
+version = $(shell sed -n "/^Version:/{s/.*: *//;s/\.//gp}" style.css)
+build_dir = _build
+
+themefile = $(build_dir)/grupos2theme_$(version).zip
+
 run_all: compile_sass_embedded_into_header minify_js
 
 compile_sass_embedded_into_header:
@@ -14,3 +20,7 @@ minify_js: $(jsfiles)
 	sudo sed -i "/<script type='text\/javascript'>$$/,/<\/script>/{//!d}" footer.php
 	sudo sed -i "/<script type='text\/javascript'>$$/ r scripts/min/script.min.js" footer.php
 
+deploy: run_all
+	mkdir -p $(build_dir)
+	zip $(themefile) $(zipfiles)
+	@echo "\n======\n\n\tCompressing done!\n\tOutput file: $(themefile)\n\n\n"

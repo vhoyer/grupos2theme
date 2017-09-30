@@ -6,9 +6,7 @@
 </header>
 <section class="entry-content">
 <p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'grupos2theme' ); ?></p>
-<?php get_search_form(); ?>
 </section>
 </article>
 </section>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

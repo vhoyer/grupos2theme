@@ -58,7 +58,7 @@
 		padding-top: 1em;
 		padding-bottom: 1em;
 
-		ul.menu{
+		ul.menu,.menu ul{
 			list-style: none;
 			margin: 0;
 			padding: 0;
@@ -103,7 +103,7 @@
 			padding: 0 0;
 			font-weight: 900;
 
-			ul.menu{
+			ul.menu,.menu ul{
 				margin-right: 1em;
 				display: flex;
 				align-items: center;
