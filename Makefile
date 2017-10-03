@@ -5,7 +5,11 @@ zipfiles = *.php screenshot.jpg style.css languages/ sass/fonts/* sass/third-par
 version = $(shell sed -n "/^Version:/{s/.*: *//;s/\.//gp}" style.css)
 build_dir = _build
 
-themefile = $(build_dir)/grupos2theme_$(version).zip
+themefile = $(build_dir)/grupos2theme.zip
+
+
+
+
 
 run_all: compile_sass_embedded_into_header minify_js
 
