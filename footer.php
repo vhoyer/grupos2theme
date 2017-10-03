@@ -1,5 +1,5 @@
 <div class="clear"></div>
-<section id="contato" class="container">
+<div id="contato" class="container">
 	<div class="row">
 		<div class="col-md-9 col-sm-10 col-xs-12">
 			<dl class="contato-info">
@@ -21,20 +21,19 @@
 				<dd>
 				<span>contato@grpos2.net</span>
 				</dd>
-				</ul>
+			</dl>
 		</div>
 		<div id="social" class="col-md-3 col-sm-2 col-xs-12 flex-wrapper align-left social normalize-anchor">
 			<a href="<?php get_theme_mod("socialFacebookLink") ?>" target="_blank"><i class="fa fa-2x fa-facebook"></i></a>
 		</div>
 	</div>
-</section>
 </div>
-<footer id="footer" class="clear" role="contentinfo">
+</div>
+<footer id="footer" class="clear">
 <div id="copyright">
 <?php echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'grupos2theme' ), '&copy;', date( 'Y' ), esc_html( get_bloginfo( 'name' ) ) ); ?>
 </div>
 </footer>
-</div>
 <?php wp_footer(); ?>
 <script type='text/javascript'>
 var id=function(e){return document.getElementById(e)}

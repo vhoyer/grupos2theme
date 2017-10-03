@@ -24,8 +24,8 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<div id="wrapper" class="hfeed">
-			<nav id="menu" role="navigation"><!--{{{-->
-				<a href='<?php echo get_home_url(); ?>'>
+			<nav id="menu"><!--{{{-->
+				<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
 					<?php //set-up header logo
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
 					$header_logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -34,7 +34,7 @@
 					<img src="<?php echo $header_logo[0] ?>" alt="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>">
 					<?php endif; ?>
 					<div id='site-title' class='<?php if($header_logo[0]!="") { echo "sr-only"; } ?>'>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?><?php echo esc_html( get_bloginfo( 'name' ) ); ?><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?></a>
+						<?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?><?php echo esc_html( get_bloginfo( 'name' ) ); ?><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
 					</div>
 				</a>
 				<a id='nav-menu-laucher' role='button'>
@@ -50,8 +50,8 @@
 		</div>
 		<div id="container">
 <?php $front_or_home = is_front_page() || is_home() || is_front_page() && is_home(); ?>
-<header id="header" role="banner"><!--{{{-->
-	<section id="branding" <?php if( !($front_or_home) ){echo 'class="small"';} ?>>
+<header id="header"><!--{{{-->
+	<div id="branding" <?php if( !($front_or_home) ){echo 'class="small"';} ?>>
 		<?php if ( $front_or_home ) : ?>
 		<div class='owl-carousel owl-theme'>
 			<div class='item'>
@@ -69,5 +69,5 @@
 			<a class="btn round btn-blue" href="<?php get_theme_mod("btnConsultorLink") ?>" role="button">Faça uma Avaliação Gratuita</a>
 		</div>
 		<?php endif; ?>
-	</section>
+	</div>
 </header><!--}}}-->
