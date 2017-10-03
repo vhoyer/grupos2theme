@@ -30,8 +30,10 @@
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
 					$header_logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 					?>
+					<?php if ($header_logo[0]!=""): ?>
 					<img src="<?php echo $header_logo[0] ?>" alt="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>">
-					<div id='site-title' class='sr-only'>
+					<?php endif; ?>
+					<div id='site-title' class='<?php if($header_logo[0]!="") { echo "sr-only"; } ?>'>
 						<?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
 					</div>
 				</a>
