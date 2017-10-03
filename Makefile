@@ -5,7 +5,7 @@ zipfiles = *.php screenshot.jpg style.css languages/ sass/fonts/* sass/third-par
 version = $(shell sed -n "/^Version:/{s/.*: *//p}" style.css)
 build_dir = _build
 
-themefile = $(build_dir)/grupos2theme$(shell echo $(version) | sed -n "s/.//gp").zip
+themefile = $(build_dir)/grupos2theme$(shell sed -n "/^Version:/{s/.*: *//;s/\.//gp}" style.css).zip
 
 
 
