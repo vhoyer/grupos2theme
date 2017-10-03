@@ -42,6 +42,14 @@ function grupos2theme_load_scripts() {
 	//
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/'.'sass/third-party/font-awesome.min.css', array(), '' );
 	wp_enqueue_style( 'opensans', 'https://fonts.googleapis.com/css?family=Open+Sans' );
+	//
+	// bootstrap
+	//
+	wp_enqueue_style( 'gridsys', get_template_directory_uri().'/'.'sass/third-party/bootstrap-grid.min.css' );
+	//
+	// normalize css
+	//
+	wp_enqueue_style( 'normalize', get_template_directory_uri().'/'.'sass/third-party/normalize.min.css' );
 }
 add_action( 'comment_form_before', 'grupos2theme_enqueue_comment_reply_script' );
 function grupos2theme_enqueue_comment_reply_script()
