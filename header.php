@@ -34,7 +34,7 @@
 					<img src="<?php echo $header_logo[0] ?>" alt="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>">
 					<?php endif; ?>
 					<div id='site-title' class='<?php if($header_logo[0]!="") { echo "sr-only"; } ?>'>
-						<?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?><?php echo esc_html( get_bloginfo( 'name' ) ); ?><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?></a>
 					</div>
 				</a>
 				<a id='nav-menu-laucher' role='button'>
