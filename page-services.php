@@ -34,7 +34,7 @@ $query = new WP_Query( [
 					</div>
 					<?php if ( has_post_thumbnail() ): ?>
 					<div class='center-img-inside'>
-						<?php the_post_thumbnail(); ?>
+						<?php the_post_thumbnail('medium_large'); ?>
 					</div>
 					<?php endif; ?>
 				</div>

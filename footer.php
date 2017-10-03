@@ -1,29 +1,31 @@
 <div class="clear"></div>
 <section id="contato" class="container">
-	<div class="col-md-9">
-		<dl class="contato-info">
-			<dt>
+	<div class="row">
+		<div class="col-md-9 col-sm-10 col-xs-12">
+			<dl class="contato-info">
+				<dt>
 				<i class="fa fa-phone"></i>
-			</dt>
-			<dd>
+				</dt>
+				<dd>
 				<span>+55 12 3019 0075</span>
-			</dd>
-			<dt>
+				</dd>
+				<dt>
 				<i class="fa fa-map-marker"></i>
-			</dt>
-			<dd>
+				</dt>
+				<dd>
 				<span>São José dos Campos - SP</span>
-			</dd>
-			<dt>
+				</dd>
+				<dt>
 				<i class="fa fa-envelope"></i>
-			</dt>
-			<dd>
+				</dt>
+				<dd>
 				<span>contato@grpos2.net</span>
-			</dd>
-		</ul>
-	</div>
-	<div id="social" class="col-md-3 flex-wrapper align-left social normalize-anchor">
-		<a href="<?php get_theme_mod("socialFacebookLink") ?>" target="_blank"><i class="fa fa-2x fa-facebook"></i></a>
+				</dd>
+				</ul>
+		</div>
+		<div id="social" class="col-md-3 col-sm-2 col-xs-12 flex-wrapper align-left social normalize-anchor">
+			<a href="<?php get_theme_mod("socialFacebookLink") ?>" target="_blank"><i class="fa fa-2x fa-facebook"></i></a>
+		</div>
 	</div>
 </section>
 </div>

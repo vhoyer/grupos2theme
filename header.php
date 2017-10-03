@@ -54,7 +54,7 @@
 				Somos especializados em <em>MARKETING DIGITAL</em>
 			</div>
 			<div class='item'>
-				Conectamos <em>EMPRESAR</em> e <em>CLIENTES</em> através do <em>INBOUND MARKETING</em>
+				Conectamos <em>EMPRESAS</em> e <em>CLIENTES</em> através do <em>INBOUND MARKETING</em>
 			</div>
 			<div class='item'>
 				<em class='quote'>“</em>Conteúdo constrói <em>RELACIONAMENTOS.</em> Relacionamentos são baseados em <em>CONFIANÇA.</em> Confiança gera <em>RECEITA.<em class='quote'>”</em></em> <span class='person'>Andrew Davis</span>
