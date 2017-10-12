@@ -55,7 +55,7 @@
 			max-height: $logo_height;
 
 			@media screen and (min-width: $screen_lg){
-				transform: translate(8em, 1/2*$logo_height);
+				transform: translate(8em, 2.8em);
 				transition: transform ease .4s;
 			}
 		}
