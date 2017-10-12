@@ -1,3 +1,5 @@
+@import '../framework.scss';
+
 .btn{
 	display: block;
 	padding: .4em 1em;
@@ -5,8 +7,8 @@
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
+	transition: background-color .2s ease-in;
 }
-
 .btn.round{
 	border-radius: 7px;
 }
@@ -19,4 +21,11 @@
 }
 .btn.btn-bluegray{
 	background-color: $color_bluegray;
+}
+
+.btn:hover{
+	background-color: $color_orange;
+}
+.btn.btn-orange:hover{
+	background-color: lighten($color_orange, 12%);
 }

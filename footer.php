@@ -19,7 +19,7 @@
 				<i class="fa fa-envelope"></i>
 				</dt>
 				<dd>
-				<span>contato@grpos2.net</span>
+				<span>contato@grupos2mkt.com</span>
 				</dd>
 			</dl>
 		</div>

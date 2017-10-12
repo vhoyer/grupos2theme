@@ -24,6 +24,11 @@ minify_js: $(jsfiles)
 	sudo sed -i "/<script type='text\/javascript'>$$/,/<\/script>/{//!d}" footer.php
 	sudo sed -i "/<script type='text\/javascript'>$$/ r scripts/min/script.min.js" footer.php
 
+debug: minify_js
+	sass --no-cache --sourcemap=none sass/global.scss:style.min.css --style compressed
+	sudo sed -i '/<style>/,/<\/style>/{//!d}' header.php
+	sudo sed -i '/<style>/ r style.min.css' header.php
+
 deploy: run_all
 	mkdir -p $(build_dir)
 	zip $(themefile) $(zipfiles)

@@ -1,3 +1,5 @@
+@import '../framework.scss';
+
 %container {
 	width: 100%;
 	position: fixed;
@@ -39,10 +41,24 @@
 		&>.nav-main_menu{
 			background-color: inherit;
 		}
+
+		&>a img {
+			@media screen and (min-width: $screen_lg){
+				transform: translate(0,0);
+			}
+		}
 	}
 
-	a img{
-		max-height: calc(#{$header_height} - .5em);
+	&>a{
+		img {
+			$logo_height: $header_height - .5em;
+			max-height: $logo_height;
+
+			@media screen and (min-width: $screen_lg){
+				transform: translate(8em, 1/2*$logo_height);
+				transition: transform ease .4s;
+			}
+		}
 	}
 
 	#nav-menu-laucher{
@@ -81,7 +97,7 @@
 		}
 	}
 }
-@media screen and (min-width: $screen_lg){// {{{
+@media screen and (min-width: $screen_lg){
 	#menu{
 		&.scrolled>.nav-main_menu{
 			background-color: transparent;
@@ -101,7 +117,6 @@
 			width: auto;
 			height: 100%;
 			padding: 0 0;
-			font-weight: 900;
 
 			ul.menu,.menu ul{
 				margin-right: 1em;
@@ -127,7 +142,8 @@
 			}
 			.btn{
 				text-transform: uppercase;
+				font-weight: 900;
 			}
 		}
 	}
-}// }}}
+}

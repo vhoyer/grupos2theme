@@ -1,3 +1,5 @@
+@import '../framework.scss';
+
 @for $i from 1 through 4 {
 	.panel-#{$i}{
 		background-color: lighten($color_bluegray, 10+(5*$i));
