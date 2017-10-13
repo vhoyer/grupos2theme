@@ -10,6 +10,8 @@ themefile = $(build_dir)/grupos2theme$(shell sed -n "/^Version:/{s/.*: *//;s/\./
 
 
 
+run_all_bell: run_all
+	notify-send -u normal "Make: complete" "[sass; js]: compile done"
 
 run_all: compile_sass_embedded_into_header minify_js
 
@@ -33,3 +35,4 @@ deploy: run_all
 	mkdir -p $(build_dir)
 	zip $(themefile) $(zipfiles)
 	@echo "\n======\n\n\tCompressing done!\n\tOutput file: $(themefile)\n\n\n"
+	notify-send -u normal "Make: complete" "[sass; js; zip]: compile done"
