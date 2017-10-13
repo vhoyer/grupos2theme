@@ -18,6 +18,7 @@ if ($query->have_posts()):
 			<?php dynamic_heading( get_the_title(), array(
 			"in_front" => "h3",
 			"else" => "h2",
+			"class" => "title",
 			)); ?>
 			<?php //content before <!--more--> tag
 			$content = get_post_field( 'post_content', get_the_ID() );

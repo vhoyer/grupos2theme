@@ -1,4 +1,15 @@
+@import '../framework.scss';
+
 .case{
+	.title{
+		color: $color_bluegray;
+		font-size: 1.9em;
+	}
+	h3{
+		color: $color_darker_text;
+		font-size: 1.35em;
+	}
+
 	.comment-text{
 		text-align: center;
 	}

@@ -41,7 +41,7 @@ function grupos2theme_load_scripts() {
 	// Fonts
 	//
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/'.'sass/third-party/font-awesome.min.css', array(), '' );
-	wp_enqueue_style( 'opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' );
+	wp_enqueue_style( 'opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' );
 	//
 	// bootstrap
 	//

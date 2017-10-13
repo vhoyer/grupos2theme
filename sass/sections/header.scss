@@ -71,9 +71,12 @@ $btngroup_width: 19em;
 		}
 		em{
 			display: block;
-			font-size: 2em;
-			font-weight: bold;
+			font-size: 9vw;
+			font-weight: 700;
 			font-style: normal;
+			@media screen and (min-width: $screen_lg){
+				font-size: 2em;
+			}
 
 			.quote{
 				font-size: (13/20)*1em;

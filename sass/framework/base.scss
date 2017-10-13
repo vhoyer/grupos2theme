@@ -1,8 +1,11 @@
+@import 'variables.scss';
+
 html *{
 	box-sizing: border-box;
 }
 body{
 	font-family: 'Open Sans', sans-serif;
+	color: $color_text;
 }
 .sr-only {
 	position: absolute;
