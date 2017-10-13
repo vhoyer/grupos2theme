@@ -37,7 +37,9 @@
 
 				<dd>
 				<span>
-					<a href="<?php esc_html( get_theme_mod("socialFacebookLink") ) ?>" target="_blank"><?php get_theme_mod("socialFacebookPage") ?></a>
+					<a href="<?php esc_html( get_theme_mod("socialFacebookLink") ) ?>" target="_blank">
+						<?php get_theme_mod("socialFacebookPage") ?>
+					</a>
 				</span>
 				</dd>
 				<?php /////////////////// ?>
@@ -48,7 +50,9 @@
 
 				<dd>
 				<span>
-					<a href="<?php esc_html( get_theme_mod("socialLinkedinLink") ) ?>" target="_blank"><?php get_theme_mod("socialLinkedinPage") ?></a>
+					<a href="<?php esc_html( get_theme_mod("socialLinkedinLink") ) ?>" target="_blank">
+						<?php get_theme_mod("socialLinkedinPage") ?>
+					</a>
 				</span>
 				</dd>
 			</dl>
