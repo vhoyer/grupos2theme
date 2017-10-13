@@ -1,12 +1,22 @@
 @import '../framework.scss';
 
-#cards .fa{
-	color: #000;
-}
-#cards h2{
-	font-weight: normal;
-	color: $color_darker_text;
-}
-#cards div[class*="panel-"]{
-	padding-bottom: 1em;
+#cards{
+	.row{
+		@media screen and (min-width: $screen_md){
+			display: flex;
+		}
+	}
+	
+	.fa{
+		color: #000;
+	}
+
+	h2{
+		font-weight: normal;
+		color: $color_darker_text;
+	}
+
+	div[class*="panel-"]{
+		padding-bottom: 1em;
+	}
 }

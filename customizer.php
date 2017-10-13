@@ -3,6 +3,7 @@ add_action( 'customize_register', 'grupos2theme_customizer_settings' );
 function grupos2theme_customizer_settings( $wp_customize ) {
 	$themeroot = get_template_directory();
 
+	$wp_customize->remove_section('colors');
 
 	/*[Pages feeds]{{{*/
 	$wp_customize->add_section( 'grupos2theme_feeds' , array(
@@ -90,10 +91,41 @@ function grupos2theme_customizer_settings( $wp_customize ) {
 			'transport'   => 'refresh',
 		) );
 		$wp_customize->add_control( 'socialFacebookLinkControl', array(
-			'label' => __( 'Link of the facebook social button on the footer of the site', 'grupos2theme' ),
+			'label' => __( '[Facebook] Page link', 'grupos2theme' ),
 			'settings'   => 'socialFacebookLink',
 			'section' => 'grupos2theme_btns',
 			'type' => 'url',
-		));/*}}}*/
+		));
+		$wp_customize->add_setting( 'socialFacebookPage' , array(
+			'default'     => "",
+			'transport'   => 'refresh',
+		) );
+		$wp_customize->add_control( 'socialFacebookPageControl', array(
+			'label' => __( '[Facebook] Page name', 'grupos2theme' ),
+			'settings'   => 'socialFacebookPage',
+			'section' => 'grupos2theme_btns',
+			'type' => 'text',
+		)); /*}}}*/
+		/*[LinkedIn]{{{*/
+		$wp_customize->add_setting( 'socialLinkedinLink' , array(
+			'default'     => "",
+			'transport'   => 'refresh',
+		) );
+		$wp_customize->add_control( 'socialLinkedinLinkControl', array(
+			'label' => __( '[Linkedin] Page link', 'grupos2theme' ),
+			'settings'   => 'socialLinkedinLink',
+			'section' => 'grupos2theme_btns',
+			'type' => 'url',
+		));
+		$wp_customize->add_setting( 'socialLinkedinPage' , array(
+			'default'     => "",
+			'transport'   => 'refresh',
+		) );
+		$wp_customize->add_control( 'socialLinkedinPageControl', array(
+			'label' => __( '[Linkedin] Page name', 'grupos2theme' ),
+			'settings'   => 'socialLinkedinPage',
+			'section' => 'grupos2theme_btns',
+			'type' => 'text',
+		)); /*}}}*/
 	/*}}}*/
 }

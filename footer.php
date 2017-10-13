@@ -5,26 +5,53 @@
 			<dl class="contato-info">
 				<dt>
 				<i class="fa fa-phone"></i>
+				<span class="sr-only">Telefone</span>
 				</dt>
+
 				<dd>
 				<span>+55 12 3019 0075</span>
 				</dd>
+				<?php /////////////////// ?>
 				<dt>
 				<i class="fa fa-map-marker"></i>
+				<span class="sr-only">Endereço</span>
 				</dt>
+
 				<dd>
 				<span>São José dos Campos - SP</span>
 				</dd>
+				<?php /////////////////// ?>
 				<dt>
 				<i class="fa fa-envelope"></i>
+				<span class="sr-only">Email</span>
 				</dt>
+
 				<dd>
 				<span>contato@grupos2mkt.com</span>
 				</dd>
+				<?php /////////////////// ?>
+				<dt>
+				<i class="fa fa-facebook"></i>
+				<span class="sr-only">facebook page</span>
+				</dt>
+
+				<dd>
+				<span>
+					<a href="<?php esc_html( get_theme_mod("socialFacebookLink") ) ?>" target="_blank"><?php get_theme_mod("socialFacebookPage") ?></a>
+				</span>
+				</dd>
+				<?php /////////////////// ?>
+				<dt>
+				<i class="fa fa-linkedin"></i>
+				<span class="sr-only">Linkedin</span>
+				</dt>
+
+				<dd>
+				<span>
+					<a href="<?php esc_html( get_theme_mod("socialLinkedinLink") ) ?>" target="_blank"><?php get_theme_mod("socialLinkedinPage") ?></a>
+				</span>
+				</dd>
 			</dl>
-		</div>
-		<div id="social" class="col-md-3 col-sm-2 col-xs-12 flex-wrapper align-left social normalize-anchor">
-			<a href="<?php get_theme_mod("socialFacebookLink") ?>" target="_blank"><i class="fa fa-2x fa-facebook"></i></a>
 		</div>
 	</div>
 </div>

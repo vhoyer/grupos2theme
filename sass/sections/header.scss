@@ -74,7 +74,7 @@ $btngroup_width: 19em;
 			font-size: 9vw;
 			font-weight: 700;
 			font-style: normal;
-			@media screen and (min-width: $screen_lg){
+			@media screen and (min-width: $screen_md){
 				font-size: 2em;
 			}
 
@@ -100,6 +100,9 @@ $btngroup_width: 19em;
 	.btn-group{
 		width: 80%;
 		margin: 0 auto;
+		@media screen and (min-width: $screen_md){
+			width: 50%;
+		}
 		@media screen and (min-width: $screen_lg){
 			position: absolute;
 			top: 47%;
