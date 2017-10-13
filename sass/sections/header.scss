@@ -1,6 +1,7 @@
 @import '../framework.scss';
 
 $owl_before_after: 2em;
+$btngroup_width: 19em;
 
 #branding{
 	background-size: cover;
@@ -8,9 +9,19 @@ $owl_before_after: 2em;
 	min-height: 30vh;
 	padding-top: $header_height + $owl_before_after;
 	position: relative;
+	@media screen and (min-width: $screen_lg){
+		height: 100vh;
+		padding-top: $header_height + ($owl_before_after*2);
+	}
 
 	*{
 		z-index: 1;
+	}
+
+	&.small{
+		@media screen and (min-width: $screen_lg){
+			height: 40vh;
+		}
 	}
 
 	&::after{
@@ -29,21 +40,48 @@ $owl_before_after: 2em;
 	text-align: center;
 	font-size: 1.2em;
 
+
+	.owl-dots{
+		@media screen and (min-width: $screen_lg){
+			width: calc(77vw - (19em)/2.4);
+		}
+	}
 	.owl-stage{
 		display: flex;
 		align-items: center;
+		@media screen and (min-width: $screen_lg){
+			margin-bottom: 2em;
+		}
 
+		.wrapper{
+			@media screen and (min-width: $screen_lg){
+				height: 60vh;
+			}
+		}
+		.item{
+			font-weight: 300;
+			@media screen and (min-width: $screen_lg){
+				$width: calc(77vw - (#{$btngroup_width})/3.6);
+				position: absolute;
+				top: 50%;
+				width: $width;
+				transform: translateY(-50%);
+				font-size: 1.5em;
+			}
+		}
 		em{
 			display: block;
-			font-size: 1.2em;
+			font-size: 2em;
 			font-weight: bold;
 			font-style: normal;
 
 			.quote{
+				font-size: (13/20)*1em;
 				position: absolute;
 			}
 		}
 		.quote{
+			position: relative;
 			display: inline;
 			font-size: 1.3em;
 		}
@@ -59,47 +97,18 @@ $owl_before_after: 2em;
 	.btn-group{
 		width: 80%;
 		margin: 0 auto;
+		@media screen and (min-width: $screen_lg){
+			position: absolute;
+			top: 47%;
+			left: calc(77vw - (#{$btngroup_width})/2);
+			width: $btngroup_width;
+		}
 	}
 	.btn-group .btn{
 		margin-bottom: 1em;
 		width: 100%;
-	}
-}
-@media screen and (min-width: $screen_lg){//{{{
-#header{
-	#branding{
-		height: 100vh;
-		padding-top: $header_height + ($owl_before_after*2);
-	}
-	#branding.small{
-		height: 40vh;
-	}
-	.btn-group{
-		$width: 19em;
-		position: absolute;
-		top: 47%;
-		left: calc(77% - (#{$width})/2);
-		width: $width;
-
-		.btn{
+		@media screen and (min-width: $screen_lg){
 			font-size: 1.2em;
 		}
 	}
 }
-#branding .owl-theme{
-	.owl-stage{
-		margin-bottom: 2em;
-
-		.item{
-			padding: 0 10em;
-		}
-		em{
-			display: inline;
-
-			.quote{
-				position: relative;
-			}
-		}
-	}
-}
-}// }}}
