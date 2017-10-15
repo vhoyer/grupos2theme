@@ -24,11 +24,16 @@ if ($query->have_posts()):
 			$content = get_post_field( 'post_content', get_the_ID() );
 			$content_parts = get_extended( $content );
 			echo $content_parts['main']; ?>
+
 			<?php if ( has_post_thumbnail() ): ?>
 			<div class="row full-img-inside feature">
 				<?php the_post_thumbnail(); ?>
 			</div>
 			<?php endif; ?>
+
+			<div class='btn-group'>
+				<a class="btn btn-orange round" role="button" href="<?php esc_url( get_post_custom_values('download_url', get_the_ID())[0] ) ?>"><?php _e('Download', 'grupos2theme') ?></a>
+			</div>
 		</div>
 		<?php endwhile; ?>
 	</div>

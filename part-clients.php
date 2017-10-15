@@ -17,7 +17,7 @@ if ($query->have_posts()):
 			<?php while ($query->have_posts()) : $query->the_post(); if ( has_post_thumbnail() ): ?>
 			<div class='client col-lg-3 col-md-3 col-sm-6 col-xs-12'>
 				<div class='img-inside'>
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail("thumbnail"); ?>
 				</div>
 				<p>
 				<?php //content before <!--more--> tag

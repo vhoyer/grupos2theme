@@ -1,6 +1,8 @@
 @import '../framework.scss';
 
 .case{
+	position: relative;
+
 	.title{
 		color: $color_bluegray;
 		font-size: 1.9em;
@@ -20,5 +22,24 @@
 		overflow: hidden;
 		display: flex;
 		align-items: center;
+	}
+
+	.feature + .btn-group {
+		$font-size: 1.2em;
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		bottom: $font-size *1;
+		font-size: $font-size;
+		width: 100%;
+		@media screen and (min-width: $screen_sm){
+			bottom: $font-size *2;
+		}
+		@media screen and (min-width: $screen_md){
+			bottom: $font-size *3;
+		}
+		@media screen and (min-width: $screen_lg){
+			bottom: $font-size *4;
+		}
 	}
 }
