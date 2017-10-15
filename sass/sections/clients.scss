@@ -1,33 +1,36 @@
-$client-box-size: 250px;
-
 #clients{
-	div.clients>div.client {
+	.row,.client,.client .img-inside{
 		display: flex;
-		align-items: center;
-		width: $client-box-size;
-		height: $client-box-size;
-		margin: 1em;
-		overflow: hidden;
+	}
+	.row{
+		flex-flow: row wrap;
 	}
 
-	div.clients>div img{
+	.client .img-inside{
+		justify-content: center;
+		align-items: center;
+		margin: 0 -15px;
+	}
+	.client img{
 		z-index: -1;
-		position: absolute;
-		display: block;
-		width: $client-box-size;
+		width: 50%;
 		height: auto;
 		transition: filter .2s ease-out;
 	}
-	div.clients>div:hover img{
+	.client:hover img{
 		filter: blur(3px);
-		transition: filter .2s ease-out;
 	}
 
-	div.clients>div p{
+	.client p{
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
 		display: none;
-		margin: 0 1em;
 	}
-	div.clients>div:hover p{
+	.client:hover p{
 		display: block;
 	}
 }

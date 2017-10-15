@@ -12,20 +12,22 @@ if ($query->have_posts()):
 	<?php dynamic_heading("Clientes", [
 	"class"=>"heading"
 	]); ?>
-	<div class='flex-wrapper wrap space-around clients'>
-		<?php while ($query->have_posts()) : $query->the_post(); if ( has_post_thumbnail() ): ?>
-		<div class='client'>
-			<div class='center-img-inside'>
-				<?php the_post_thumbnail(); ?>
+	<div class='container flex-wrapper wrap space-around clients'>
+		<div class='row'>
+			<?php while ($query->have_posts()) : $query->the_post(); if ( has_post_thumbnail() ): ?>
+			<div class='client col-lg-3 col-md-3 col-sm-6 col-xs-12'>
+				<div class='img-inside'>
+					<?php the_post_thumbnail(); ?>
+				</div>
+				<p>
+				<?php //content before <!--more--> tag
+				$content = get_post_field( 'post_content', get_the_ID() );
+				$content_parts = get_extended( $content );
+				echo $content_parts['main']; ?>
+				</p>
 			</div>
-			<p>
-			<?php //content before <!--more--> tag
-			$content = get_post_field( 'post_content', get_the_ID() );
-			$content_parts = get_extended( $content );
-			echo $content_parts['main']; ?>
-			</p>
+			<?php endif; endwhile; ?>
 		</div>
-		<?php endif; endwhile; ?>
 	</div>
 </section>
 <?php endif; ?>
