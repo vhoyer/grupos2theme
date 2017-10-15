@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-	window.onscroll = function () {
+	function onScroll() {
 		var y = window.pageYOffset;
 		var nav = document.getElementById('menu');
 		if (y <= 0) {
@@ -7,5 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else {
 			nav.classList.add('scrolled');
 		}
-	};
+	}
+	window.onscroll = onScroll;
 });
