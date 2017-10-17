@@ -67,9 +67,11 @@
 </footer>
 <?php wp_footer(); ?>
 <script type='text/javascript'>
-var id=function(e){return document.getElementById(e)}
-document.addEventListener("DOMContentLoaded",function(){function e(){var e=window.pageYOffset,n=document.getElementById("menu")
-e<=0?n.classList.remove("scrolled"):n.classList.add("scrolled")}window.onscroll=e}),$(document).ready(function(){$(".owl-carousel").owlCarousel({autoplay:!0,autoplayHoverPause:!0,autoplayTimeout:5e3,loop:!0,smartSpeed:750,items:1})}),$("#nav-menu-laucher").click(function(){var e=id("nav-menu-laucher").children[0]
+function navOnScroll(){var e=window.pageYOffset,n=document.getElementById("menu")
+e<=0?n.classList.remove("scrolled"):n.classList.add("scrolled")}function clientsMobOnScroll(){(window.navigator.maxTouchPoints||"ontouchstart"in document)&&$("#clientsContainer").children().each(function(){var e=window.pageYOffset+250,n=$(this).offset().top,t=$(this).outerHeight()+n
+if(!(e>=n&&e<=t))return void this.classList.remove("hover")
+this.classList.add("hover")})}var id=function(e){return document.getElementById(e)}
+document.addEventListener("DOMContentLoaded",function(){window.onscroll=function(){navOnScroll(),clientsMobOnScroll()}}),$(document).ready(function(){$(".owl-carousel").owlCarousel({autoplay:!0,autoplayHoverPause:!0,autoplayTimeout:5e3,loop:!0,smartSpeed:750,items:1})}),$("#nav-menu-laucher").click(function(){var e=id("nav-menu-laucher").children[0]
 $(".nav-main_menu")[0].classList.toggle("open"),e.classList.toggle("fa-bars"),e.classList.toggle("fa-times")})
 </script>
 </body>

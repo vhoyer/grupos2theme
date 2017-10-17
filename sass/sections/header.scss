@@ -4,6 +4,7 @@ $owl_before_after: 2em;
 $btngroup_width: 19em;
 
 #branding{
+	z-index: -2;
 	background-size: cover;
 	background-position: center;
 	min-height: 30vh;
@@ -23,14 +24,8 @@ $btngroup_width: 19em;
 			height: 40vh;
 		}
 	}
-
-	&::after{
-		@extend %pseudo-block;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0,0,0,0.6);
+	&:after{
+		@extend %dark_overlay;
 	}
 }
 
@@ -60,18 +55,19 @@ $btngroup_width: 19em;
 		}
 		.item{
 			font-weight: 300;
+			font-size: .9em;
 			@media screen and (min-width: $screen_lg){
 				$width: calc(77vw - (#{$btngroup_width})/3.6);
 				position: absolute;
 				top: 50%;
 				width: $width;
 				transform: translateY(-50%);
-				font-size: 1.5em;
+				font-size: 1.3em;
 			}
 		}
 		em{
 			display: block;
-			font-size: 9vw;
+			font-size: 8vw;
 			font-weight: 700;
 			font-style: normal;
 			@media screen and (min-width: $screen_md){

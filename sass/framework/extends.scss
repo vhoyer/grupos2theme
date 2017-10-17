@@ -3,10 +3,21 @@
 }
 
 %svg-bg {
-	@extend %pseudo-block;
+	content: ' ';
 	z-index: -1;
 	position: absolute;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+
+%dark_overlay {
+	content: ' ';
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
 }

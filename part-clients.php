@@ -12,12 +12,14 @@ if ($query->have_posts()):
 	<?php dynamic_heading("Clientes", [
 	"class"=>"heading"
 	]); ?>
-	<div class='container flex-wrapper wrap space-around clients'>
-		<div class='row'>
+	<div class='container-fluid flex-wrapper wrap space-around clients'>
+		<div id="clientsContainer" class='row'>
 			<?php while ($query->have_posts()) : $query->the_post(); if ( has_post_thumbnail() ): ?>
 			<div class='client col-lg-3 col-md-3 col-sm-6 col-xs-12'>
 				<div class='img-inside'>
-					<?php the_post_thumbnail("thumbnail"); ?>
+					<?php
+					set_post_thumbnail_size( 180, 180);
+					the_post_thumbnail(); ?>
 				</div>
 				<p>
 				<?php //content before <!--more--> tag

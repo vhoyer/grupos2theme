@@ -1,23 +1,27 @@
+@import '../framework.scss';
+
 #clients{
 	.row,.client,.client .img-inside{
 		display: flex;
 	}
 	.row{
 		flex-flow: row wrap;
+		justify-content: center;
+		width: 100%;
 	}
 
 	.client .img-inside{
 		justify-content: center;
 		align-items: center;
-		margin: 0 -15px;
+		width: 100%;
 	}
 	.client img{
-		z-index: -1;
-		width: 50%;
+		z-index: -2;
 		height: auto;
 		transition: filter .2s ease-out;
 	}
-	.client:hover img{
+	.client:hover img,
+	.client.hover img{
 		filter: blur(3px);
 	}
 
@@ -27,10 +31,30 @@
 		text-align: center;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%,-100%);
+		color: $color_white_text;
 		display: none;
 	}
-	.client:hover p{
+	.client:hover p,
+	.client.hover p{
 		display: block;
+	}
+
+	.client{
+		margin-top: 2em;
+
+		&:after{
+			@extend %dark_overlay;
+			margin: 0 -15px;
+			filter: blur(1px);
+			padding: 5px 0;
+			margin-top: -5px;
+			opacity: 0;
+			transition: opacity .3s ease;
+		}
+		&:hover:after,
+		&.hover:after{
+			opacity: 0.75;
+		}
 	}
 }
