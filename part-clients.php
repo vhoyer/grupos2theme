@@ -21,12 +21,12 @@ if ($query->have_posts()):
 					set_post_thumbnail_size( 180, 180);
 					the_post_thumbnail(); ?>
 				</div>
-				<p>
+				<div class='text-container'>
 				<?php //content before <!--more--> tag
 				$content = get_post_field( 'post_content', get_the_ID() );
 				$content_parts = get_extended( $content );
 				echo $content_parts['main']; ?>
-				</p>
+				</div>
 			</div>
 			<?php endif; endwhile; ?>
 		</div>

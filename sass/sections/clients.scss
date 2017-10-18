@@ -25,23 +25,24 @@
 		filter: blur(3px);
 	}
 
-	.client p{
+	.client .text-container{
 		position: absolute;
 		width: 100%;
 		text-align: center;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%,-100%);
+		transform: translate(-50%,-50%);
 		color: $color_white_text;
 		display: none;
 	}
-	.client:hover p,
-	.client.hover p{
+	.client:hover .text-container,
+	.client.hover .text-container{
 		display: block;
 	}
 
 	.client{
 		margin-top: 2em;
+		min-height: 180px;
 
 		&:after{
 			@extend %dark_overlay;
