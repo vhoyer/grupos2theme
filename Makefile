@@ -1,7 +1,7 @@
 jsframeworks = scripts/framework.js
 jsfiles = $(wildcard scripts/src/*.js)
 
-zipfiles = *.php screenshot.png style.css languages/ sass/fonts/* sass/third-party/* scripts/third-party/* imgs/*
+zipfiles = *.php screenshot.jpg style.css languages/ sass/fonts/* sass/third-party/* scripts/third-party/* imgs/*
 version = $(shell sed -n "/^Version:/{s/.*: *//p}" style.css)
 build_dir = _build
 

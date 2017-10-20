@@ -22,10 +22,14 @@ if ($query->have_posts()):
 					the_post_thumbnail(); ?>
 				</div>
 				<div class='text-container'>
-				<?php //content before <!--more--> tag
-				$content = get_post_field( 'post_content', get_the_ID() );
-				$content_parts = get_extended( $content );
-				echo $content_parts['main']; ?>
+					<?php dynamic_heading(get_the_title(), [
+					"in_front" => "h3",
+					"else" => "h2",
+					]); ?>
+					<?php //content before <!--more--> tag
+					$content = get_post_field( 'post_content', get_the_ID() );
+					$content_parts = get_extended( $content );
+					echo $content_parts['main']; ?>
 				</div>
 			</div>
 			<?php endif; endwhile; ?>
