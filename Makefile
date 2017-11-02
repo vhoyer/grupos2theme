@@ -1,12 +1,12 @@
 jsframeworks = scripts/framework.js
 jsfiles = $(wildcard scripts/src/*.js)
 
-zipfiles = *.php screenshot.jpg style.css languages/ sass/fonts/* sass/third-party/* scripts/third-party/* imgs/*
+themefiles = *.php screenshot.jpg style.css languages/ sass/fonts/* sass/third-party/* scripts/third-party/* imgs/*
 version = $(shell sed -n "/^Version:/{s/.*: *//p}" style.css)
 build_dir = _build
 
-themefile = $(build_dir)/grupos2theme$(shell sed -n "/^Version:/{s/.*: *//;s/\.//gp}" style.css).zip
-
+zipfile = $(build_dir)/grupos2theme$(shell sed -n "/^Version:/{s/.*: *//;s/\.//gp}" style.css).zip
+current_server_folder = grupos2theme1817
 
 
 
@@ -33,6 +33,17 @@ debug: minify_js
 
 deploy: run_all
 	mkdir -p $(build_dir)
-	zip $(themefile) $(zipfiles)
-	@echo "\n======\n\n\tCompressing done!\n\tOutput file: $(themefile)\n\n\n"
-	notify-send -u normal "Make: complete" "[sass; js; zip]: compile done"
+	rm -rf $(build_dir)/*
+	zip $(zipfile) $(themefiles)
+	unzip -u $(zipfile) -d $(build_dir)
+	rm $(zipfile)
+	@echo "\n======\n\n\tUpload preparation done\n\n\n"
+	printf 'cd grupos2mkt.com.APIKIWPHOST/wp-content/themes/\n\
+		put -rp $(build_dir)\n\
+		rename $(current_server_folder) gs2themeOLD\n\
+		rename $(build_dir) $(current_server_folder)\n\
+		quit\n' \
+	| sftp -P22 grupos2mkt_ps@34.225.176.19
+	ssh -p22 grupos2mkt_ps@34.225.176.19 'rm -rf grupos2mkt.com.APIKIWPHOST/wp-content/themes/gs2themeOLD'
+	@#rsync -rzp -e 'ssh -p 22' --progress ./_build/ grupos2mkt_ps@34.225.176.19:/home/grupos2mkt_ps/grupos2mkt.com.APIKIWPHOST/wp-content/themes/gs2theme
+	@notify-send -u normal "Make: upload done" "[sass; js; upload]: process complete"
