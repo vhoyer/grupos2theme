@@ -43,7 +43,6 @@ deploy: run_all
 		rename $(current_server_folder) gs2themeOLD\n\
 		rename $(build_dir) $(current_server_folder)\n\
 		quit\n' \
-	| sftp -P22 grupos2mkt_ps@34.225.176.19
-	ssh -p22 grupos2mkt_ps@34.225.176.19 'rm -rf grupos2mkt.com.APIKIWPHOST/wp-content/themes/gs2themeOLD'
-	@#rsync -rzp -e 'ssh -p 22' --progress ./_build/ grupos2mkt_ps@34.225.176.19:/home/grupos2mkt_ps/grupos2mkt.com.APIKIWPHOST/wp-content/themes/gs2theme
+	| sftp -P22 -i ~/.ssh/id_rsa grupos2mkt_ps@34.225.176.19
+	ssh -p22 -i ~/.ssh/id_rsa grupos2mkt_ps@34.225.176.19 'rm -rf grupos2mkt.com.APIKIWPHOST/wp-content/themes/gs2themeOLD'
 	@notify-send -u normal "Make: upload done" "[sass; js; upload]: process complete"
