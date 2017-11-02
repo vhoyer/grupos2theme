@@ -17,7 +17,7 @@ $query = new WP_Query( [
 	<?php dynamic_heading(get_the_title(), [
 	"class"=> "heading",
 	]); ?>
-	<div class="center-text-within container-fluid">
+	<div class="center-text-within container">
 		<div class='row normalize-anchor'>
 			<?php while ($query->have_posts()) : $query->the_post(); ?>
 			<a href="<?php echo esc_url( get_post_custom_values("product_url", get_the_ID())[0] ) ?>">
