@@ -4,12 +4,10 @@ $owl_before_after: 2em;
 $btngroup_width: 19em;
 
 #branding{
-	z-index: -2;
 	background-size: cover;
 	background-position: center;
 	min-height: 30vh;
 	padding-top: $header_height + $owl_before_after;
-	position: relative;
 	@media screen and (min-width: $screen_lg){
 		height: 100vh;
 		padding-top: $header_height + ($owl_before_after*2);
@@ -26,6 +24,7 @@ $btngroup_width: 19em;
 	}
 	&:after{
 		@extend %dark_overlay;
+		z-index: 0;
 	}
 }
 
