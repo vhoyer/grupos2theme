@@ -32,7 +32,7 @@ html *{-webkit-box-sizing:border-box;box-sizing:border-box}body{font-family:'Ope
 				<div class='nav-main_menu'>
 					<?php wp_nav_menu( array( 'theme_location' => 'main_nav' ) ); ?>
 					<div class='flex-wrapper col'>
-						<a class='btn btn-orange round' role='button' href='<?php get_theme_mod("btnConsultorLink") ?>'><?php //TODO: chage dynamic text ?>Falar com um consultor</a>
+						<a class='btn btn-orange round' role='button' href='<?php echo esc_url(get_theme_mod("btnConsultorLink")) ?>'><?php //TODO: chage dynamic text ?>Falar com um consultor</a>
 					</div>
 				</div>
 			</nav><!--}}}-->
@@ -60,8 +60,8 @@ html *{-webkit-box-sizing:border-box;box-sizing:border-box}body{font-family:'Ope
 			</div>
 		</div>
 		<div class="btn-group flex-wrapper col">
-			<a class="btn round btn-bluegray" href="<?php get_theme_mod("btnConsultorLink") ?>" role="button">Receba um Orçamento</a>
-			<a class="btn round btn-blue" href="<?php get_theme_mod("btnConsultorLink") ?>" role="button">Faça uma Avaliação Gratuita</a>
+			<a class="btn round btn-bluegray" href="<?php echo esc_url(get_theme_mod("btnConsultorLink")) ?>" role="button">Receba um Orçamento</a>
+			<a class="btn round btn-blue" href="<?php echo esc_url(get_theme_mod("btnConsultorLink")) ?>" role="button">Faça uma Avaliação Gratuita</a>
 		</div>
 		<?php endif; ?>
 	</div>
