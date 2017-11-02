@@ -4,7 +4,7 @@ Theme URI: https://github.com/vhoyer/grupos2theme
 Author: Vinícius Hoyer
 Author URI: https://github.com/vhoyer
 Description: Antes de usar o tema, é importante configurá-lo, pois as imagens, e links não existem por padrão. Quando ativar o tema, deve-se escolher uma imagem para a logo da barra de navegação fixa no topo, uma imagem para o banner/header no começo da pagina, as paginas que vão servir para alimentar de informação as seções da pagina de rosto (cases, clientes e serviços) e os links dos botões. Sobre a seção clientes: o texto que aparece por cima da logo, é o conteúdo da pagina filha da designada anteriormente, a logo em si, é a imagem de destaque da pagina; Sobre a pagina "Produtos do grupo S2", o slug dessa pagina deve ser 'produtos', os filhos dela devem ter o título, a imagem destaque e (IMPORTANTE) ter como campo personalizado (Custom Fields) de nome 'product_url' com o link do produto. Sobre a pagina 'Serviços' ter um título é importante, já Imagem destaque e corpo só se desejado. Sobre a seção Cases: Título, corpo e imagem destaque são importantes.
-Version: 1.8.17
+Version: 1.8.18
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: grupos2theme

@@ -20,7 +20,7 @@ $query = new WP_Query( [
 	<div class="center-text-within container-fluid">
 		<div class='row normalize-anchor'>
 			<?php while ($query->have_posts()) : $query->the_post(); ?>
-			<a href="<?php echo get_post_custom_values("product_url", get_the_ID())[0] ?>">
+			<a href="<?php echo esc_url( get_post_custom_values("product_url", get_the_ID())[0] ) ?>">
 				<div class="case col-md-6">
 					<?php dynamic_heading( get_the_title(), array(
 					"in_front" => "h3",

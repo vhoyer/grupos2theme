@@ -32,7 +32,7 @@ if ($query->have_posts()):
 			<?php endif; ?>
 
 			<div class='btn-group'>
-				<a class="btn btn-orange round" role="button" href="<?php esc_url( get_post_custom_values('download_url', get_the_ID())[0] ) ?>"><?php _e('Download', 'grupos2theme') ?></a>
+				<a class="btn btn-orange round" role="button" href="<?php echo esc_url( get_post_custom_values('download_url', get_the_ID())[0] ) ?>"><?php _e('Download', 'grupos2theme') ?></a>
 			</div>
 		</div>
 		<?php endwhile; ?>
