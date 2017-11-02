@@ -16,7 +16,7 @@ run_all_bell: run_all
 run_all: compile_sass_embedded_into_header minify_js
 
 compile_sass_embedded_into_header:
-	sass --no-cache --sourcemap=none sass/global.scss:style.min.css --style compressed
+	sass -r 'compass/import-once/activate' --no-cache --sourcemap=none sass/global.scss:style.min.css --style compressed
 	postcss --no-map false style.min.css -ru autoprefixer
 	sudo sed -i '/<style>/,/<\/style>/{//!d}' header.php
 	sudo sed -i '/<style>/ r style.min.css' header.php

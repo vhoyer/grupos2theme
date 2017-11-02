@@ -6,6 +6,7 @@ Primeiramente, esse tema foi construído com base no _starter theme_ [blankslate
 - Node.js
 - minify
 - postcss
+- [compass/import-once](https://github.com/Compass/compass/blob/master/import-once/README.md)
 - autoprefixer
 - GNU Make
 - sed
